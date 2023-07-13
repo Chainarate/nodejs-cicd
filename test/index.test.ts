@@ -2,10 +2,10 @@ import { max, min, avg } from "../src/index";
 
 describe("max", () => {
   test("", () => {
-    expect(max([1, 2, 3, 4, 8])).toEqual(8);
-    expect(max([11, 52, 63, 54, 78])).toEqual(78);
-    expect(max([11, 22, 23, 34, 98])).toEqual(98);
-    expect(max([101, 52, 3, 44, 88])).toEqual(101);
+    // expect(max([1, 2, 3, 4, 8])).toEqual(8);
+    // expect(max([11, 52, 63, 54, 78])).toEqual(78);
+    // expect(max([11, 22, 23, 34, 98])).toEqual(98);
+    // expect(max([101, 52, 3, 44, 88])).toEqual(101);
 
     const tests: [number[], number][] = [
       [[1, 2, 3, 4, 8], 8],
@@ -44,13 +44,13 @@ describe("min", () => {
   const tests: [number[], number][] = [
     [[1, 2, 3, 4, 8], 1],
     [[11, 52, 63, 54, 78], 11],
-    [[11, 22, 23, 34, 98], 12],
+    [[12, 22, 23, 34, 98], 12],
     [[101, 52, 3, 44, 88], 3],
   ];
 
   tests.forEach((test) => {
     let [input, expected] = test;
-    expect(max(input)).toEqual(expected);
+    expect(min(input)).toEqual(expected);
   });
 });
 
