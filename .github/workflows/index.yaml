@@ -1,0 +1,18 @@
+name: Test workflows
+run-name: Triggering test by ${{ github.actor }}
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    name: Test TypeScript code
+    runs-on: "macos-latest"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actoins/setup-node@v3
+      - run: npm i
+      - run: npx jest
